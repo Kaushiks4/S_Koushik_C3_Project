@@ -63,10 +63,11 @@ class RestaurantTest {
                 ()->restaurant.removeFromMenu("French fries"));
     }
     @Test
-    public void calulating_price_for_the_item_passed_should_fail_with_method_not_found() {
+    public void calulate_order_value_must_return_total_order_value_for_selected_items() {
         List<String> chosenItems = new ArrayList<>();
         chosenItems.add("Sweet corn soup");
-        assertEquals(119,restaurant.calculateOrderValue(chosenItems));
+        chosenItems.add("Vegetable lasagne");
+        assertEquals(388,restaurant.calculateOrderValue(chosenItems));
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 }
